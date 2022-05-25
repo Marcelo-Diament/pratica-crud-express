@@ -1,3 +1,17 @@
+const fs = require('fs')
+const path = require('path')
+
+const helper = {}
+
+helper.read = fileName => fs.readFileSync(path.join(__dirname, `../data/${fileName}`), 'utf-8')
+
+helper.write = (fileName, data) => fs.writeFileSync(
+  path.join(__dirname, `../data/${fileName}`),
+  JSON.stringify(data, null, 2),
+  'utf-8'
+)
+
+
 const controller = {}
 
 // GET
