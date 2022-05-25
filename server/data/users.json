@@ -4,7 +4,7 @@
     "nome": "Fulano",
     "sobrenome": "de Tal",
     "email": "fulano@tal.com.br",
-    "idade": "53",
+    "idade": 53,
     "descricao": "Menino bom, educado. Gente boa.",
     "admin": true,
     "avatar": null
@@ -24,7 +24,7 @@
     "nome": "Ciclano",
     "sobrenome": "Reis",
     "email": "ciclano@reis.com.br",
-    "idade": "33",
+    "idade": 33,
     "descricao": "O Ciclano é um sujeito muito gente boa. Cara ponta firme.",
     "admin": true,
     "avatar": null
