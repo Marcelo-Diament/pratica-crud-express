@@ -32,9 +32,22 @@ controller.add = (req, res) => {
   res.json(usuario)
 }
 
-controller.edit = (req, res) => {
-  const usuario = getUsuarioPorId(req.params.id)
-  res.json(usuario)
+controller.edit = async (req, res) => {
+  const usuario = await getUsuarioPorId(req.params.id)
+  res.render(`usuario-editar`, {
+    title: 'UsersController.edit',
+    usuario
+  })
+}
+
+controller.update = async (req, res) => {
+  const usuario = await getUsuarioPorId(req.params.id)
+  const {name} = req.body
+  console.log(name)
+  res.render(`usuario-editar`, {
+    title: 'UsersController.update',
+    usuario
+  })
 }
 
 controller.exclude = (req, res) => {
@@ -43,7 +56,10 @@ controller.exclude = (req, res) => {
 }
 controller.show = (req, res) => {
   const usuario = getUsuarioPorId(req.params.id)
-  res.json(usuario)
+  res.render(`usuario`, {
+    title: 'UsersController.show',
+    usuario
+  })
 }
 
 // POST / PUT / DELETE
