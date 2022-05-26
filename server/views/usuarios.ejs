@@ -22,7 +22,7 @@
         <% for (let usuario of usuarios) { %>
         <tr>
           <td>
-            <img src="<%= usuario.avatar ? `images/avatar/`+usuario.avatar` : `images/avatar-null.png` %>" alt="Avatar de <%= usuario.nome %>" width="60px" height="60px" style="border-radius: 50%;display: block;height: 60px;width: 60px;">
+            <img src="<%= usuario.avatar ? `images/avatar/`+usuario.avatar : `images/avatar-null.png` %>" alt="Avatar de <%= usuario.nome %>" width="60px" height="60px" style="border-radius: 50%;display: block;height: 60px;width: 60px;">
           </td>
           <td><%= usuario.id %></td>
           <td><%= usuario.nome %></td>

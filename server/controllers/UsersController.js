@@ -19,8 +19,8 @@ const getUsuarioPorId = id => getUsuarios().find(usuario => usuario.id == id)
 const controller = {}
 
 // GET
-controller.index = (req, res) => {
-  const usuarios = getUsuarios()
+controller.index = async (req, res) => {
+  const usuarios = await getUsuarios()
   res.render(`usuarios`, {
     title: 'UsersController.index',
     usuarios
