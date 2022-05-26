@@ -11,15 +11,37 @@ helper.write = (fileName, data) => fs.writeFileSync(
   'utf-8'
 )
 
+const getUsuarios = () => JSON.parse(helper.read('users.json'))
+
+const getUsuarioPorId = id => getUsuarios().find(usuario => usuario.id == id)
+
 
 const controller = {}
 
 // GET
-controller.index = (req, res) => res.send(`USUÁRIOS`)
-controller.add = (req, res) => res.send(`CADASTRAR USUÁRIO`)
-controller.edit = (req, res) => res.send(`ATUALIZAR USUÁRIO`)
-controller.exclude = (req, res) => res.send(`EXCLUIR USUÁRIO`)
-controller.show = (req, res) => res.send(`USUÁRIO ${req.params.id}`)
+controller.index = (req, res) => {
+  const usuarios = getUsuarios()
+  res.json(usuarios)
+}
+
+controller.add = (req, res) => {
+  const usuario = getUsuarioPorId(req.params.id)
+  res.json(usuario)
+}
+
+controller.edit = (req, res) => {
+  const usuario = getUsuarioPorId(req.params.id)
+  res.json(usuario)
+}
+
+controller.exclude = (req, res) => {
+  const usuario = getUsuarioPorId(req.params.id)
+  res.json(usuario)
+}
+controller.show = (req, res) => {
+  const usuario = getUsuarioPorId(req.params.id)
+  res.json(usuario)
+}
 
 // POST / PUT / DELETE
 
