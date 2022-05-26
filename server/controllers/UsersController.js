@@ -21,7 +21,10 @@ const controller = {}
 // GET
 controller.index = (req, res) => {
   const usuarios = getUsuarios()
-  res.json(usuarios)
+  res.render(`usuarios`, {
+    title: 'UsersController.index',
+    usuarios
+  })
 }
 
 controller.add = (req, res) => {
