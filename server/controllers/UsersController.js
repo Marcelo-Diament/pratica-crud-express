@@ -13,6 +13,8 @@ helper.write = (fileName, data) => fs.writeFileSync(
 
 const getUsuarios = () => JSON.parse(helper.read('users.json'))
 
+const setUsuarios = (usuarios) => helper.write('users.json', usuarios)
+
 const getUsuarioPorId = id => getUsuarios().find(usuario => usuario.id == id)
 
 
@@ -41,13 +43,30 @@ controller.edit = async (req, res) => {
 }
 
 controller.update = async (req, res) => {
-  const usuario = await getUsuarioPorId(req.params.id)
-  const {name} = req.body
-  console.log(name)
-  res.render(`usuario-editar`, {
-    title: 'UsersController.update',
-    usuario
+  console.log({ body: req.body })
+  let usuarios = await getUsuarios()
+  usuarios = usuarios.map(usuario => {
+    if (usuario.id == req.params.id) {
+      const { avatar, nome, sobrenome, email, idade, descricao, admin } = req.body
+      const usuarioAtualizado = {
+        id: usuario.id,
+        nome,
+        sobrenome,
+        email,
+        idade,
+        descricao,
+        admin: !!admin,
+        avatar: avatar || null
+      }
+      console.log(usuarioAtualizado)
+      return usuarioAtualizado
+    } else {
+      return usuario
+    }
   })
+  console.log(usuarios)
+  // setUsuarios(usuarios)
+  res.redirect(`/sucesso`)
 }
 
 controller.exclude = (req, res) => {

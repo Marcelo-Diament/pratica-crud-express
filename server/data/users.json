@@ -1,12 +1,7 @@
 [
   {
     "id": 1,
-    "nome": "Fulano",
-    "sobrenome": "de Tal",
-    "email": "fulano@tal.com.br",
-    "idade": 53,
-    "descricao": "Menino bom, educado. Gente boa.",
-    "admin": true,
+    "admin": false,
     "avatar": null
   },
   {

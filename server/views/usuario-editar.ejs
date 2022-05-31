@@ -5,14 +5,14 @@
     <%= title %>
   </h1>
   <section>
-    <h2>Editar Usuário <%= usuario.nome %>
+    <h2>Editar <%= usuario.nome %>
       <%= usuario.sobrenome %>
     </h2>
     <p>Edite os dados do usuário <%= usuario.nome %>
       <%= usuario.sobrenome %>.</p>
     <form action="/usuarios/<%= usuario.id %>/editar?_method=put" method="post" enctype="multipart/form-data">
       <div>
-        <img src="<%= usuario.avatar ? `/images/avatar/`+usuario.avatar : `/images/avatar-null.png` %>" alt="Avatar <%= usuario.nome %>" height="60" width="60" style="border-radius:50%;width:60px;height:60px;display:block;">
+        <img src="/images/<%= usuario.avatar ? `avatar/${usuario.avatar}` : 'avatar-null.png' %>" alt="Avatar <%= usuario.nome %>" height="60" width="60" style="border-radius:50%;width:60px;height:60px;display:block;">
         <label for="avatar">Avatar</label>
         <input type="file" name="avatar" id="avatar" value="<%= usuario.avatar %>" accept="image/*" capture="user" />
       </div>
