@@ -30,7 +30,7 @@ const controller = {};
 
 controller.add = (req, res) =>
   res.render("usuario-adicionar", {
-    title: req.path == "/cadastro" ? `Cadsatro` : `Adicionar Usuário`,
+    title: req.path == "/cadastro" ? `Cadastro` : `Adicionar Usuário`,
   });
 
 controller.create = async (req, res) => {

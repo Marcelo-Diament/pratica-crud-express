@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/', controller.index);
 
 router.get('/adicionar', controller.add);
+router.post('/adicionar', controller.create);
 
 router.get('/:id/editar', controller.edit);
 router.put('/:id/editar', controller.update);
