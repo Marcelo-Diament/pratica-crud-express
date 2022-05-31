@@ -1,8 +1,12 @@
 [
   {
     "id": 1,
-    "admin": false,
-    "avatar": null
+    "nome": "Fulano",
+    "sobrenome": "Dias",
+    "email": "beltrano@dias.com",
+    "idade": "18",
+    "descricao": "Moleque bagunceiro, cheio de molecagem. Vacilão.\r\n        ",
+    "admin": true
   },
   {
     "id": 2,
