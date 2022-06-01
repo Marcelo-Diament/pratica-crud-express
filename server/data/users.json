@@ -27,5 +27,14 @@
     "descricao": "O Ciclano é um sujeito muito gente boa. Cara ponta firme.",
     "admin": true,
     "avatar": null
+  },
+  {
+    "id": 4,
+    "nome": "Marcelo",
+    "sobrenome": "Diament",
+    "email": "marcelodiament@gmail.com",
+    "idade": "99",
+    "descricao": "test set stsetsetse tsetse",
+    "admin": false
   }
 ]
