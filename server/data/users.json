@@ -4,8 +4,8 @@
     "nome": "Fulano",
     "sobrenome": "Dias",
     "email": "beltrano@dias.com",
-    "idade": "18",
-    "descricao": "Moleque bagunceiro, cheio de molecagem. Vacilão.\r\n        ",
+    "idade": "26",
+    "descricao": "Teste 123, 123 teste.\r\n        ",
     "admin": true
   },
   {
@@ -27,23 +27,5 @@
     "descricao": "O Ciclano é um sujeito muito gente boa. Cara ponta firme.",
     "admin": true,
     "avatar": null
-  },
-  {
-    "id": 4,
-    "nome": "Meleca",
-    "sobrenome": "de Tal",
-    "email": "meleca@dog.com",
-    "idade": "18",
-    "descricao": "Meleca, um cão sapeca.",
-    "admin": true
-  },
-  {
-    "id": 5,
-    "nome": "Henrique",
-    "sobrenome": "Diament",
-    "email": "joana.sousa@jeff.co",
-    "idade": "22",
-    "descricao": "testestestset setest tse",
-    "admin": true
   }
 ]

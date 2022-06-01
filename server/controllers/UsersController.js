@@ -84,11 +84,13 @@ controller.update = async (req, res) => {
   res.redirect("/sucesso");
 };
 
-controller.exclude = (req, res) =>
+controller.exclude = (req, res) => {
+const usuario = getUsuarioPorId(req.params.id)
   res.render("usuario-excluir", {
-    title: `Excluir Usuário ${req.params.id}`,
-    usuario: getUsuarioPorId(req.params.id),
+    title: `Excluir Usuário ${usuario.nome}`,
+    usuario,
   });
+}
 
 controller.delete = async (req, res) => {
   const usuarios = await getUsuarios().filter(
