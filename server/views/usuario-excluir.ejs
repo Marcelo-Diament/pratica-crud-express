@@ -12,6 +12,9 @@
             <%= usuario.sobrenome %>.</p>
         <form action="/usuarios/<%= usuario.id %>/apagar?_method=delete" method="post">
           <div>
+            <img src="/images/<%= usuario.avatar ? `avatar/${usuario.avatar}` : 'avatar-null.png' %>" alt="Avatar <%= usuario.nome %>" height="60" width="60" style="border-radius:50%;width:60px;height:60px;">
+          </div>
+          <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" placeholder="Fulano" value="<%= usuario.nome %>" disabled />
           </div>
