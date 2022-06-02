@@ -5,18 +5,19 @@
     "sobrenome": "Dias",
     "email": "beltrano@dias.com",
     "idade": "26",
-    "descricao": "Teste 123, 123 teste.\r\n        ",
-    "admin": true
+    "descricao": "                    Teste 123, 123 teste.\r\n        \r\n        \r\n        ",
+    "admin": true,
+    "avatar": "avatar-1654130573869-541293622-IMG_20170929_233956_266.jpg"
   },
   {
     "id": 2,
-    "nome": "Beltrano",
+    "nome": "Beltranos",
     "sobrenome": "Dias",
     "email": "beltrano@dias.com",
-    "idade": 15,
-    "descricao": "Moleque bagunceiro, cheio de molecagem. Vacilão.",
-    "admin": false,
-    "avatar": null
+    "idade": "18",
+    "descricao": "                    Moleque bagunceiro, cheio de molecagem. Vacilão.\r\n        \r\n        ",
+    "admin": true,
+    "avatar": "avatar-1654130590036-856054933-IMG_20170929_224001_289.jpg"
   },
   {
     "id": 3,
@@ -27,5 +28,15 @@
     "descricao": "O Ciclano é um sujeito muito gente boa. Cara ponta firme.",
     "admin": true,
     "avatar": null
+  },
+  {
+    "id": 4,
+    "nome": "Marcelo",
+    "sobrenome": "Diament",
+    "email": "joana.sousa@jeff.co",
+    "idade": "18",
+    "descricao": "testsetestetstetettetseet",
+    "admin": true,
+    "avatar": "avatar-1654130260188-21557475-IMG_20180217_125258_856.jpg"
   }
 ]

@@ -37,7 +37,7 @@ controller.create = async (req, res) => {
   const usuarios = await getUsuarios();
   const id = await getProximoId();
   const { nome, sobrenome, email, idade, descricao, admin } = req.body;
-  // const avatarFileName = req.file.filename;
+  const avatarFileName = req.file.filename;
   const novoUsuario = {
     id,
     nome,
@@ -45,7 +45,8 @@ controller.create = async (req, res) => {
     email,
     idade,
     descricao,
-    admin: !!admin
+    admin: !!admin,
+    avatar: avatarFileName || null
   };
   usuarios.push(novoUsuario);
   setUsuarios(usuarios);
@@ -66,7 +67,7 @@ controller.update = async (req, res) => {
     if (usuario.id == req.params.id) {
       const { nome, sobrenome, email, idade, descricao, admin } =
         req.body;
-      // const avatarFileName = req.file.filename;
+      const avatarFileName = req.file.filename;
       return {
         id: usuario.id,
         nome,
@@ -75,6 +76,7 @@ controller.update = async (req, res) => {
         idade,
         descricao,
         admin: !!admin,
+        avatar: avatarFileName || null
       };
     } else {
       return usuario;
